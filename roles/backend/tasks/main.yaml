@@ -37,13 +37,13 @@
     src: backend.service.j2
     dest: /etc/systemd/system/backend.service
 
-# - name: install the mysql libs
-#   ansible.builtin.pip:
-#    name: "{{ item }}"
-#    executable: pip3.9
-#   loop:
-#   - 
-
+- name: install the mysql libs
+  ansible.builtin.pip:
+    name: "{{ item }}"
+    executable: pip3.9
+  loop:
+   - PyMySQL
+   - cryptography
 
 - name: importing the database
   community.mysql.mysql_db:
