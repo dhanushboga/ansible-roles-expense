@@ -26,6 +26,7 @@
   ansible.builtin.unarchive:
     src: /tmp/backend.zip
     dest: /app
+    remote_src: yes
 
 - name: install the dependencies
   community.general.npm:
@@ -36,6 +37,13 @@
   ansible.builtin.copy:
     src: backend.service
     dest: /etc/systemd/system/backend.service
+
+# - name: install the mysql libs
+#   ansible.builtin.pip:
+#    name: "{{ item }}"
+#    executable: pip3.9
+#   loop:
+#   - 
 
 
 - name: importing the database
