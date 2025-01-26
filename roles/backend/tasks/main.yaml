@@ -47,7 +47,7 @@
 
 - name: importing the database
   community.mysql.mysql_db:
-     state: export
+     state: import
      name: all
      login_user: "{{ mysql_user }}"
      login_password: "{{ sql_password }}"
