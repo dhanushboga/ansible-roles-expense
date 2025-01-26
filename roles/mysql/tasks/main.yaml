@@ -11,7 +11,7 @@
 
 - name: install the python libs
   ansible.builtin.pip:
-    name: {{ item }}
+    name: {{item}}
     state: present
     executable: pip3.3
   loop:
