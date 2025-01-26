@@ -1,9 +1,7 @@
 - name: configuring the backend server
   hosts: backend
   become: yes
-  tasks:
-  - name: disable the nodeJS old version
-    ansible.builtin.command: dnf module disable nodejs -y
+  roles:
+  - backend
 
-  - name: Enable the nodeJS version 20
-    ansible.builtin.command: dnf module enable nodejs:20 -y
+  
