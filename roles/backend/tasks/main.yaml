@@ -9,7 +9,7 @@
     name: nodejs
   
 - name: Add the expense user
-  ansible.built.user:
+  ansible.builtin.user:
     name: expense
 
 - name: Create a directory 
