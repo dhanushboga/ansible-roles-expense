@@ -33,8 +33,8 @@
     path: /app
 
 - name: Copy backend.service
-  ansible.builtin.copy:
-    src: backend.service
+  ansible.builtin.template: #it will search in templates folder
+    src: backend.service.j2
     dest: /etc/systemd/system/backend.service
 
 # - name: install the mysql libs
