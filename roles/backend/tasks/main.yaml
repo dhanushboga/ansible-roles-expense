@@ -17,6 +17,8 @@
     name: expense
 
 - name: include from common role
+  tags:
+  - deployment
   include_role:
    name: common
    tasks_from: main
@@ -38,6 +40,8 @@
 #     remote_src: yes
 
 - name: install the dependencies
+  tags:
+  - deployment
   community.general.npm:
     path: /app
 
