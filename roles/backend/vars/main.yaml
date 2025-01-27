@@ -1,3 +1,5 @@
 mysql_user: root
 sql_password: ExpenseApp@1
 MYSQL_HOST: mysql.chenchudaws82s.online
+APP_LOCATION: /app
+COMPONENT: backend
